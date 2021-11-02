@@ -34,6 +34,7 @@ for (i = 0; i < items.length; i++ ){
 }
 
 let currentImg = 0
+
 const next = document.querySelector(".next")
 next.addEventListener("click", function(){
     currentImg++
@@ -41,7 +42,25 @@ next.addEventListener("click", function(){
         currentImg = 0
     }
     container.innerHTML = `<img src="${items[currentImg]}" alt="">`
-container.innerHTML += `<h2> ${title[currentImg]} </h2>`
-container.innerHTML += `<p> ${text[currentImg]} </p>`
+    container.innerHTML += `<h2> ${title[currentImg]} </h2>`
+    container.innerHTML += `<p> ${text[currentImg]} </p>`
+
+} )
+
+// for (i = 0; i < items.length; i-- ){
+//    right.innerHTML += `<img class="picsum" src="${items[i]}" alt="">`
+//}
+
+let imgCurrent = 0
+
+const prev = document.querySelector(".prev")
+prev.addEventListener("click", function(){
+    imgCurrent--
+    if (imgCurrent < items.length +1){
+        imgCurrent = 0
+    }
+    container.innerHTML = `<img src="${items[imgCurrent]}" alt="">`
+    container.innerHTML += `<h2> ${title[imgCurrent]} </h2>`
+    container.innerHTML += `<p> ${text[imgCurrent]} </p>`
 
 } )
