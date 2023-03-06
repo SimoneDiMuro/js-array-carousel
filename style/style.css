@@ -1,0 +1,39 @@
+.carousel {
+  width: 1080px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  background-color: chartreuse;
+}
+
+.right {
+  width: 20%;
+  height: 100%;
+  background-color: chocolate;
+  position: relative;
+}
+
+.picsum {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.prev {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.next {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
